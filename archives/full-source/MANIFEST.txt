@@ -1,0 +1,23 @@
+PrivilegeFans FULL SOURCE v32.10-RC7
+filename=PrivilegeFans-FULL-SOURCE-v32.10-RC7.zip
+size_bytes=19713168
+sha256=a77d46135729b72de24effe4d837868bc3f5a76bd01bfdc468e10115a635637b
+base64_chars=26284224
+parts=76
+chunk_size=350000
+frontend_master_sha256=1771cabdadd7cbfb1f2614c99215b42548fcace4b8c8d3fc821bc6fb68458a8a
+
+CONTENTS
+- exact validated frontend v32.10-RC7
+- privilegefans backend source
+- backend audit
+- latest recovered Figma audit
+- frontend assets, fonts and media
+
+RECOVERY
+Run REBUILD-FULL-SOURCE.bat on Windows or REBUILD-FULL-SOURCE.py with Python.
+The reconstructed ZIP is accepted only if its SHA-256 matches the expected value above.
+
+SAFETY
+No production deployment was performed.
+NEXO Control was not modified.

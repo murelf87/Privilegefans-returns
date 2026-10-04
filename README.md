@@ -1,46 +1,35 @@
 # PrivilegeFans Returns
 
-Repositorio de recuperación y continuidad de PrivilegeFans.
+Copia de seguridad y recuperación completa de **PrivilegeFans v32.10-RC7**.
 
-## Último estado verificable
+## Fuente completa recuperada
 
-Última release candidate validada: **v32.10-RC7 — Soporte**.
+El paquete fuente integral está almacenado en:
 
-SHA-256 esperado del frontend maestro RC7:
+`archives/full-source/`
 
-`1771cabdadd7cbfb1f2614c99215b42548fcace4b8c8d3fc821bc6fb68458a8a`
+Incluye el **frontend RC7 exacto**, backend, auditoría de backend, auditoría Figma recuperada y todos los assets disponibles.
 
-SHA-256 del paquete ONECLICK RC7:
+Para reconstruir el ZIP completo en Windows, ejecuta:
 
-`e46b0743d267249ebe83179dd4178bd3255e8d2975a27c59552876972ea529b0`
+`archives/full-source/REBUILD-FULL-SOURCE.bat`
 
-Resultado validado:
+El proceso verifica automáticamente la integridad.
 
-- SHA=OK
+- Frontend RC7 SHA-256: `1771cabdadd7cbfb1f2614c99215b42548fcace4b8c8d3fc821bc6fb68458a8a`
+- Fuente completa SHA-256: `a77d46135729b72de24effe4d837868bc3f5a76bd01bfdc468e10115a635637b`
+- Tamaño fuente completa: 19,713,168 bytes
+- Fragmentos: 76/76
+
+## Estado validado RC7
+
 - APP_JS_NODE_CHECK=OK
 - SOPORTE_RESPONSIVE=OK
 - AVATAR_1_1=OK
-- OPERACIONES_DEMO=IDENTIFICADAS
 - ENDPOINTS_NUEVOS=NINGUNO
 - BACKEND=NO_MODIFICADO
 - NEXO_CONTROL=NO_MODIFICADO
 - DESPLIEGUE=NINGUNO
 - RESULTADO=OK
 
-## Estado de recuperación
-
-Los ZIP fuente maestros RC6/RC7 no están disponibles actualmente en la copia local revisada ni en Library. Este repositorio conserva únicamente material recuperado y verificable; no se reconstruye código perdido fingiendo que es idéntico al original.
-
-## Reglas de continuidad
-
-- `TODO JUNTO PRIVILEGEFANS.pdf` manda en funcionalidad, flujos, permisos y comportamientos.
-- Mantener el frontend visual aprobado.
-- No inventar endpoints.
-- No modificar NEXO Control.
-- No desplegar automáticamente a producción.
-- Mantener botón Volver/Atrás donde el usuario pueda quedar atrapado.
-- Revisar cabecera completa, navegación no comprimida, avatar 1:1, responsive y distribución de ancho.
-
-## Próximo incremento previsto
-
-**v32.10-RC8 — Cabecera + Responsive global**, únicamente a partir de una copia fuente íntegra y verificable de RC7 o una recuperación equivalente comprobada.
+No se ha desplegado nada a producción durante esta recuperación.
