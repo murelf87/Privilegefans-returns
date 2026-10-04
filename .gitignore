@@ -1,0 +1,21 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+id_ed25519
+nexo_ionos
+
+# Dependencies / builds
+node_modules/
+dist/
+build/
+coverage/
+
+# Runtime
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
