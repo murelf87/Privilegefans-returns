@@ -1,0 +1,55 @@
+name: Restore verified PrivilegeFans RC7 source
+
+on:
+  push:
+    paths:
+      - ".recovery/RESTORE-RC7"
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download and verify exact RC7 files
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="source/PrivilegeFans-Frontend-Master-v32.10-RC7"
+          BASE="https://beta.privilegefans.com"
+          MANIFEST=".recovery/RC7-SHA256SUMS.txt"
+          mkdir -p "$ROOT"
+          while IFS= read -r line; do
+            [ -z "$line" ] && continue
+            sha="${line%%  *}"
+            path="${line#*  }"
+            dest="$ROOT/$path"
+            mkdir -p "$(dirname "$dest")"
+            echo "Restoring $path"
+            curl --fail --location --silent --show-error "$BASE/$path" -o "$dest"
+            actual="$(sha256sum "$dest" | awk '{print $1}')"
+            if [ "$actual" != "$sha" ]; then
+              echo "SHA mismatch: $path"
+              echo "expected=$sha"
+              echo "actual=$actual"
+              exit 23
+            fi
+          done < "$MANIFEST"
+
+      - name: Commit verified source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "PrivilegeFans Recovery"
+          git config user.email "actions@users.noreply.github.com"
+          git add source/PrivilegeFans-Frontend-Master-v32.10-RC7
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Restore exact verified PrivilegeFans v32.10-RC7 source"
+          git push
