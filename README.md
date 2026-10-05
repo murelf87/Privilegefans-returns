@@ -1,35 +1,28 @@
 # PrivilegeFans Returns
 
-Copia de seguridad y recuperación completa de **PrivilegeFans v32.10-RC7**.
+Copia de seguridad y continuidad de PrivilegeFans.
 
-## Fuente completa recuperada
+## Último estado estable
 
-El paquete fuente integral está almacenado en:
+**v32.10-RC8 — Cabecera + responsive global**
 
-`archives/full-source/`
+RC8 parte del frontend RC7 exacto y añade una capa separada y reversible para la cabecera y el responsive global.
 
-Incluye el **frontend RC7 exacto**, backend, auditoría de backend, auditoría Figma recuperada y todos los assets disponibles.
+- Frontend RC8 SHA-256: `e19ee41dc3a5cba758d5bd79ee9a1f497f02c486318a1c9307b892be357af871`
+- ONECLICK RC8 SHA-256: `39e86bcf9647436dbfb42a4b2024488e89f264c36b95a05783c09ac4f15e2555`
 
-Para reconstruir el ZIP completo en Windows, ejecuta:
+### Verificado
 
-`archives/full-source/REBUILD-FULL-SOURCE.bat`
+- app.js RC7 conservado sin cambios
+- styles.css RC7 conservado sin cambios
+- rc8-header.js: sintaxis OK
+- sin endpoints nuevos
+- cabecera responsive por rangos
+- Chat / Notificaciones / Diamantes con espacios propios
+- avatar 1:1
+- búsqueda móvil visible al activarla
+- backend no modificado
+- NEXO Control no modificado
+- sin despliegue a producción
 
-El proceso verifica automáticamente la integridad.
-
-- Frontend RC7 SHA-256: `1771cabdadd7cbfb1f2614c99215b42548fcace4b8c8d3fc821bc6fb68458a8a`
-- Fuente completa SHA-256: `a77d46135729b72de24effe4d837868bc3f5a76bd01bfdc468e10115a635637b`
-- Tamaño fuente completa: 19,713,168 bytes
-- Fragmentos: 76/76
-
-## Estado validado RC7
-
-- APP_JS_NODE_CHECK=OK
-- SOPORTE_RESPONSIVE=OK
-- AVATAR_1_1=OK
-- ENDPOINTS_NUEVOS=NINGUNO
-- BACKEND=NO_MODIFICADO
-- NEXO_CONTROL=NO_MODIFICADO
-- DESPLIEGUE=NINGUNO
-- RESULTADO=OK
-
-No se ha desplegado nada a producción durante esta recuperación.
+La versión RC7 completa permanece conservada en el repositorio como base y respaldo.
