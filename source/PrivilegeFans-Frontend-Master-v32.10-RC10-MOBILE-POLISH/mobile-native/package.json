@@ -1,0 +1,27 @@
+{
+  "name": "privilegefans-mobile",
+  "private": true,
+  "version": "32.10.9",
+  "description": "PrivilegeFans iOS and Android shell for v32.10-RC9-MOBILE",
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.mjs",
+    "native:init": "npm run prepare:web && npx cap add ios && npx cap add android && npx cap sync",
+    "native:sync": "npm run prepare:web && npx cap sync",
+    "ios": "npm run native:sync && npx cap open ios",
+    "android": "npm run native:sync && npx cap open android",
+    "assets": "npx capacitor-assets generate"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3",
+    "@capacitor/keyboard": "8.0.5",
+    "@capacitor/splash-screen": "8.0.2",
+    "@capacitor/status-bar": "8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "latest",
+    "@capacitor/cli": "8.5.3"
+  }
+}
