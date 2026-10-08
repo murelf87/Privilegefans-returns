@@ -1,4 +1,4 @@
-# PrivilegeFans iPhone + Android — RC9 MOBILE
+# PrivilegeFans iPhone + Android — RC10 MOBILE POLISH
 
 La app móvil usa exactamente el frontend web aprobado y lo envuelve con Capacitor. Así se conserva una sola base visual y funcional para web, iPhone y Android.
 
@@ -12,7 +12,7 @@ La app móvil usa exactamente el frontend web aprobado y lo envuelve con Capacit
 
 El frontend conserva los contratos existentes. En web usa `/api`. Para un binario nativo empaquetado hay que exponer el mismo backend a la WebView mediante CORS/HTTPS o usar un transporte nativo equivalente; no se ha inventado ningún endpoint.
 
-## Incluido en RC9
+## Incluido en RC10
 
 - safe areas iPhone/Android
 - barra superior compatible con notch/Dynamic Island
