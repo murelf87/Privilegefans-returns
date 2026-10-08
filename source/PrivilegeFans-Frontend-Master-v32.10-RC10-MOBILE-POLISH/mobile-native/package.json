@@ -1,8 +1,8 @@
 {
   "name": "privilegefans-mobile",
   "private": true,
-  "version": "32.10.9",
-  "description": "PrivilegeFans iOS and Android shell for v32.10-RC9-MOBILE",
+  "version": "32.10.10",
+  "description": "PrivilegeFans iOS and Android shell for v32.10-RC10-MOBILE-POLISH",
   "scripts": {
     "prepare:web": "node scripts/prepare-web.mjs",
     "native:init": "npm run prepare:web && npx cap add ios && npx cap add android && npx cap sync",
