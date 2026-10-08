@@ -1,0 +1,14 @@
+{
+  "name": "PrivilegeFans",
+  "short_name": "PrivilegeFans",
+  "description": "Beta privada de PrivilegeFans",
+  "start_url": "./#/trending",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#154C82",
+  "icons": [
+    {"src":"assets/branding/pwa-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"assets/branding/pwa-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
